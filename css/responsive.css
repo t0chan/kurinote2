@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* 1199px：PC  767px：タブ  469px：スマホ */
+
+@media screen and (max-width: 1199px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 26px;
+        cursor: pointer;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .nav-button,
+    .nav-button span {
+        display: inline-block;
+    }
+
+    .nav-button {
+        position: relative;
+        width: 30px;
+        height: 26px;
+    }
+
+    .nav-button span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+    }
+
+    .nav-button span:nth-of-type(1) {
+        top: 0;
+    }
+
+    .nav-button span:nth-of-type(2) {
+        top: 11px;
+    }
+
+    .nav-button span:nth-of-type(3) {
+        bottom: 0;
+    }
+
+    .mv img {
+       height: auto;  /* 幅が縮まっても自動で高さが合う*/
+    }
+
+    
+    
+    .topics {
+        padding: 50px 5vw;
+    }
+
+    .topics .content-wrapper {
+        display: block; /* flexを解除するイメージ */
+        
+      }
+
+      .topics .heading {
+        width: 100%; /* width100%にしないと上下にならない */
+        
+    }
+
+    .topics .heading  h2 {
+        text-align: center;
+        margin-bottom: 5vw;
+    }
+
+    .topics .content {
+        width: 100%; /* width100%にしないと上下にならない */
+    }
+
+    footer .high {
+        display: block;
+    }
+
+   
+}
+@media screen and (max-width: 767px) {
+
+    .menu-trigger,
+    .menu-trigger span {
+      display: inline-block;
+    }
+
+    .menu-btn {
+    display: block;
+    }
+
+    .menu {
+      display: block;
+    
+    }
+
+    .menu ul {
+        display: block;
+      
+    }
+    
+    .mv::after {
+        background-color: #fff;   
+
+    }
+    .topics {
+        padding: 50px 0;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .topics .content .btn a {
+        margin: 0 auto;
+        width: 35%;
+        min-width: 200px;
+      }
+
+    .recruit ul {
+        transform: none;
+    }
+
+    .recruit li span {
+        transform: translate(-50%, -50%);
+         /* skewY(-2deg)を書かないことで translate(-50%, -50%)だけ反映*/
+        font-size: 1.75rem;
+    }
+
+    footer section {
+        padding-top: 50px;
+    }
+
+    footer .high li {
+        width: calc(100%/3);
+        margin: 0 0 10px;
+    }
+
+    footer .high a {
+        text-align: center;
+        display: block;
+        padding: 0;
+    }
+
+
+
+}
+
+@media screen and (max-width: 479px) {
+    .topics .content th {
+        display: block;/* tableでflexではないのでth,td其々block当てる */
+        width: 100%;
+        text-align: left;
+        padding: 1.25em 0 0 0;
+        border-bottom: none;
+        
+     }
+     
+     .topics .content td {
+        display: block;/* tableでflexではないのでth,td其々block当てる */
+        width: 100%;
+     }
+
+
+    .institution .content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .institution h2 {
+        text-align: center;
+    }
+
+    .institution p {
+        text-align: center;
+    }
+
+
+
+    .institution p .btn a {
+        width: 30%;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+
+    .recruit ul li{
+       width: 95%;  /* 95%設定にすることで上下2段になる（ flex-wrap: wrap;）が効いてるので折り返す*/
+       margin:0 auto 20px auto;   /* 20pxで2枚の画像の間に空白を入れる*/
+      }
+
+    .contact  a  {
+        width: 30%;
+        min-width: 200px;
+        margin: 0 auto;
+        top: 40%;
+    }
+
+   footer .high h1, .low {
+       text-align: center;
+   }
+
+   footer i {
+       font-size: 30px;
+       right: 10px;
+        bottom: 10px;
+   }
+
+}
